@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: free
+    autoDeploy: false
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value: dpg-d232b9qdbo4c73foucjg-a
+      - key: DB_POSTGRESDB_PORT
+        value: 5432
+      - key: DB_POSTGRESDB_DATABASE
+        value: n8n_db_egeq
+      - key: DB_POSTGRESDB_USER
+        value: n8n_db_egeq_user
+      - key: DB_POSTGRESDB_PASSWORD
+        value: jflfJdnEUzubiN11AnA633hO06eCZ92H
+      - key: DB_POSTGRESDB_SCHEMA
+        value: public
+      - key: GENERIC_TIMEZONE
+        value: Asia/Bangkok
