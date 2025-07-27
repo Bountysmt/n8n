@@ -5,6 +5,7 @@ services:
     plan: free
     autoDeploy: false
     dockerfilePath: ./Dockerfile
+    healthCheckPath: /
     envVars:
       - key: DB_TYPE
         value: postgresdb
