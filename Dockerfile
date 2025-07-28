@@ -1,8 +1,33 @@
-FROM n8nio/n8n
-
-ENV N8N_BASIC_AUTH_ACTIVE=true
-ENV N8N_BASIC_AUTH_USER=Atee
-ENV N8N_BASIC_AUTH_PASSWORD=Atee@2025!!
-
-ENV N8N_HOST=0.0.0.0
-ENV N8N_PORT=5678
+services:
+  - type: web
+    name: n8n-auto
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value: dpg-d232bqdb0c4c73foucjg-a
+      - key: DB_POSTGRESDB_PORT
+        value: 5432
+      - key: DB_POSTGRESDB_DATABASE
+        value: n8n_db_egeq
+      - key: DB_POSTGRESDB_USER
+        value: n8n_db_egeq_user
+      - key: DB_POSTGRESDB_PASSWORD
+        value: jflfJdnEUzubiN11AnA633hO06eCZ92H
+      - key: N8N_ENCRYPTION_KEY
+        value: 0RSOXbpIFh5I9LV2FxcU3Ng8yvJa9fmt
+      - key: N8N_HOST
+        value: n8n-auto-mi3c.onrender.com
+      - key: WEBHOOK_URL
+        value: https://n8n-auto-mi3c.onrender.com
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: 'true'
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: admin12345
+      - key: N8N_RUNNERS_ENABLED
+        value: 'true'
