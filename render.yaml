@@ -31,3 +31,5 @@ services:
         value: admin12345
       - key: N8N_RUNNERS_ENABLED
         value: 'true'
+      - key: PORT
+        value: 10000
