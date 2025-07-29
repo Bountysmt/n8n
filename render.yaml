@@ -10,7 +10,7 @@ services:
       - key: DB_POSTGRESDB_HOST
         value: dpg-d232b9qdbo4c73foucjg-a.singapore-postgres.render.com
       - key: DB_POSTGRESDB_PORT
-        value: 5432
+        value: "5432"
       - key: DB_POSTGRESDB_DATABASE
         value: n8n_db_egeq
       - key: DB_POSTGRESDB_USER
@@ -20,16 +20,20 @@ services:
       - key: N8N_ENCRYPTION_KEY
         value: 0RSOXbpIFh5I9LV2FxcU3Ng8yvJa9fmt
       - key: N8N_HOST
-        value: n8n-auto-mi3c.onrender.com
+        value: "0.0.0.0"
+      - key: N8N_PORT
+        value: "10000"
       - key: WEBHOOK_URL
         value: https://n8n-auto-mi3c.onrender.com
       - key: N8N_BASIC_AUTH_ACTIVE
-        value: 'true'
+        value: "true"
       - key: N8N_BASIC_AUTH_USER
         value: admin
       - key: N8N_BASIC_AUTH_PASSWORD
         value: admin12345
       - key: N8N_RUNNERS_ENABLED
-        value: 'true'
+        value: "true"
+      - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
+        value: "false"
       - key: PORT
-        value: 10000
+        value: "10000"
