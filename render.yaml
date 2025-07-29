@@ -5,6 +5,8 @@ services:
     plan: free
     autoDeploy: true
     envVars:
+      - key: DATABASE_URL
+        value: postgresql://n8n_db_egeq_user:jflfJdnEUzubiN11AnA633hO06eCZ92H@dpg-d232b9qdbo4c73foucjg-a.singapore-postgres.render.com/n8n_db_egeq?ssl=true
       - key: DB_TYPE
         value: postgresdb
       - key: DB_POSTGRESDB_HOST
@@ -21,6 +23,8 @@ services:
         value: "true"
       - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
         value: "false"
+      - key: DB_POSTGRESDB_SSL_MODE
+        value: "require"
       - key: N8N_ENCRYPTION_KEY
         value: 0RSOXbpIFh5I9LV2FxcU3Ng8yvJa9fmt
       - key: N8N_HOST
@@ -41,6 +45,8 @@ services:
         value: "false"
       - key: NODE_TLS_REJECT_UNAUTHORIZED
         value: "0"
+      - key: PGSSLMODE
+        value: "require"
       - key: DB_POSTGRESDB_SSL_ENABLED
         value: "true"
       - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
