@@ -1,0 +1,17 @@
+# ✅ Render Deploy Config สำหรับ n8n (Docker)
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: free
+    branch: main
+    autoDeploy: true
+    envVars:
+      - key: N8N_PORT
+        value: $PORT
+      - key: N8N_HOST
+        value: 0.0.0.0
+      - key: WEBHOOK_URL
+        value: https://<your-app>.onrender.com/
+      - key: N8N_ENCRYPTION_KEY
+        value: your_random_key_here
